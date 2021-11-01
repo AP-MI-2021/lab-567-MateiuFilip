@@ -1,35 +1,29 @@
 def creeaza_obiect(id,nume,descriere,pret,locatie):
     '''
-    creeaza un dictionar pentru obiect
+    creeaza o lista pentru obiect
     :param id: string
     :param nume: string
     :param descriere: string
     :param pret: float
     :param locatie: string
-    :return: dictionarul obiectului
+    :return: lista obiectului
     '''
-    return{
-        "id":id,
-        "nume":nume,
-        "descriere":descriere,
-        "pret":pret,
-        "locatie":locatie
-    }
+    return [id,nume,descriere,pret,locatie]
 
 def getId(obiect):
-    return obiect["id"]
+    return obiect[0]
 
 def getNume(obiect):
-    return obiect["nume"]
+    return obiect[1]
 
 def getDescriere(obiect):
-     return obiect["descriere"]
+     return obiect[2]
 
 def getPret(obiect):
-    return obiect["pret"]
+    return obiect[3]
 
 def getLocatie(obiect):
-    return obiect["locatie"]
+    return obiect[4]
 
 def toString(obiect):
     '''
