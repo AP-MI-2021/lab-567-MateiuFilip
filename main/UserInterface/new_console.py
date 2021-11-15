@@ -27,4 +27,4 @@ def menu(lista):
                 elif functie[0] == "Delete":
                     lista = sterge_obiect(functie[1], lista)
                 else:
-                    print("Optiune gresita. Utilizati comanda 'help'!")
+                    print("Optiune gresita. Utilizati comanda 'Help'!")

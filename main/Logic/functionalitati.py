@@ -11,6 +11,8 @@ def modifica_locatii(locatie, locatie_noua, lista):
     '''
     lista_noua = []
     for obiect in lista:
+        if len(locatie) != 4:
+            raise ValueError("Locatia trebuie sa aiba 4 cifre!")
         if getLocatie(obiect) == locatie:
             obiect[4] = locatie_noua
             lista_noua.append(obiect)

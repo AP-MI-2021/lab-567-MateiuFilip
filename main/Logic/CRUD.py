@@ -14,6 +14,16 @@ def adauga_obiect(id, nume, descriere, pret, locatie, lista):
     '''
     if getById(id,lista) is not None:
         raise ValueError("Id-ul exista deja!")
+    if len(locatie) != 4:
+        raise ValueError("Locatia trebuie sa aiba 4 cifre!")
+    if descriere is None:
+        raise ValueError("Descrierea nu poate fi nenula!")
+    if float(pret) < 0:
+        raise ValueError("Pretul nu poate fi negativ!")
+    if nume is None:
+        raise ValueError("Obiectul nu are nume!")
+    if id is None:
+        raise ValueError("Id-ul nu poate fi nul!")
     obiect = creeaza_obiect(id, nume, descriere, pret, locatie)
     return lista + [obiect]
 
@@ -55,6 +65,14 @@ def modifica_obiect(id,nume,descriere,pret,locatie,lista):
     lista_noua=[]
     for obiect in lista:
         if getId(obiect) == id:
+            if len(locatie) != 4:
+                raise ValueError("Locatia trebuie sa aiba 4 cifre!")
+            if descriere is None:
+                raise ValueError("Descrierea nu poate fi nenula!")
+            if float(pret) < 0:
+                raise ValueError("Pretul nu poate fi negativ!")
+            if nume is None:
+                raise ValueError("Obiectul nu are nume!")
             obiect_nou=creeaza_obiect(id,nume,descriere,pret,locatie)
             lista_noua.append(obiect_nou)
         else:
