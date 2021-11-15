@@ -7,7 +7,7 @@ def menu(lista):
     while True:
         comanda = input("Introduceti comanda: ")
         optiuni = comanda.split(";")
-        if comanda == "help":
+        if comanda == "Help":
             print("Add, id, nume, descriere, pret, locatie: adauga obiect")
             print("Delete, id: sterge obiect")
             print("Update, id: modifica obiect")

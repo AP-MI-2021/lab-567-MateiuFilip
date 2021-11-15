@@ -77,7 +77,7 @@ def ui_modifica_locatii(lista, undo_list, redo_list):
     try:
         locatie = input("Dati locatia curenta a obiectelor: ")
         locatie_noua = input("Dati noua locatie a obiectelor: ")
-        rezultat= modifica_locatii(locatie,locatie_noua,lista)
+        rezultat = modifica_locatii(locatie, locatie_noua, lista)
         undo_list.append(lista)
         redo_list.clear()
         return rezultat
@@ -86,7 +86,7 @@ def ui_modifica_locatii(lista, undo_list, redo_list):
         return lista
 
 
-def ui_obiecte_mai_scumpe_decat_valoare(lista,undo_list,redo_list):
+def ui_obiecte_mai_scumpe_decat_valoare(lista, undo_list, redo_list):
     try:
         pret = float(input("Dati valoarea cu care se compara preturile: "))
         string = input("Dati string-ul de concatenat: ")
@@ -130,9 +130,9 @@ def run_menu(lista):
         elif optiune == "4":
             show_all(lista)
         elif optiune == "5":
-            lista = ui_modifica_locatii(lista,undo_lista,redo_lista)
+            lista = ui_modifica_locatii(lista, undo_lista, redo_lista)
         elif optiune == "6":
-            lista = ui_obiecte_mai_scumpe_decat_valoare(lista,undo_lista,redo_lista)
+            lista = ui_obiecte_mai_scumpe_decat_valoare(lista, undo_lista, redo_lista)
         elif optiune == "7":
             ui_pret_maxim_per_locatie(lista)
         elif optiune == "8":
